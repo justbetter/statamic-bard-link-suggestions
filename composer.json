@@ -1,0 +1,55 @@
+{
+    "name": "just-better/bard-link-suggestions",
+    "description": "Add's functionality to the bard so that it suggests links.",
+    "require": {
+        "statamic/cms": "^6.3",
+        "statamic/eloquent-driver": "^5.4",
+        "laravel/framework": "^12.0 | ^13.0"
+    },
+    "require-dev": {
+        "larastan/larastan": "^3.4",
+        "laravel/pint": "^1.22",
+        "phpstan/phpstan-mockery": "^2.0",
+        "mockery/mockery": "^1.6.10",
+        "orchestra/testbench": "^10.3",
+        "phpunit/phpunit": "^11.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "JustBetter\\BardLinkSuggestions\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JustBetter\\BardLinkSuggestions\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Bard suggestions",
+            "description": "Suggests links when typing in a bard."
+        },
+        "laravel": {
+            "providers": [
+                "JustBetter\\BardLinkSuggestions\\ServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "analyse": "phpstan --memory-limit=1G",
+        "style": "pint --test",
+        "coverage": "XDEBUG_MODE=coverage php -d memory_limit=2G vendor/bin/phpunit --coverage-text --only-summary-for-coverage-text | grep -c \"100.00%\" | grep -q \"^3$\" && exit 0 || exit 1",
+        "quality": [
+            "@test",
+            "@analyse",
+            "@style",
+            "@coverage"
+        ]
+    },
+    "config": {
+        "allow-plugins": {
+            "pixelfear/composer-dist-plugin": true
+        }
+    }
+}
