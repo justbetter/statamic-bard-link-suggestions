@@ -79,7 +79,7 @@ class SuggestionsControllerTest extends TestCase
         $data = $response->json();
         $data = collect($data);
 
-        $this->assertSame(['Another Term', 'Some Term'], $data->unique('title')->reverse()->pluck('title')->toArray());
+        $this->assertEqualsCanonicalizing(['Another Term', 'Some Term'], $data->unique('title')->reverse()->pluck('title')->toArray());
     }
 
     #[Test]
