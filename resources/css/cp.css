@@ -1,0 +1,6 @@
+@import "tailwindcss/utilities";
+
+.is-loading {
+    cursor: progress;
+
+}

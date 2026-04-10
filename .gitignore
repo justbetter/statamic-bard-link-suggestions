@@ -1,0 +1,8 @@
+package-lock.json
+vendor
+composer.lock
+.phpunit.result.cache
+tests/__fixtures__/
+yarn.lock
+node_modules
+reports/
