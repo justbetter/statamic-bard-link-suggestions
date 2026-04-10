@@ -12,7 +12,7 @@ While you type in Bard, this addon searches for possible links and shows a dropd
 ### Requirements
 
 - Statamic v6
-- Laravel v12
+- Laravel 12+
 - PHP 8.3+
 - Statamic Eloquent Driver (this package queries entries via Eloquent/Stache)
 

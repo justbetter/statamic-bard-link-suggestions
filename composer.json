@@ -4,7 +4,7 @@
     "require": {
         "statamic/cms": "^6.3",
         "statamic/eloquent-driver": "^5.4",
-        "laravel/framework": "^12.0 | ^13.0"
+        "laravel/framework": "^13"
     },
     "require-dev": {
         "larastan/larastan": "^3.9",
